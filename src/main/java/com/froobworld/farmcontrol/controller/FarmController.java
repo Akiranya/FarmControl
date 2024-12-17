@@ -15,7 +15,7 @@ import org.bukkit.entity.*;
 import java.util.*;
 
 public class FarmController {
-    public static final Class<?>[] ENTITY_CLASSES = List.of(Mob.class, Vehicle.class, Projectile.class, Item.class).toArray(new Class[0]);
+    public static final Class<?>[] ENTITY_CLASSES = List.of(Mob.class, Vehicle.class, Projectile.class, Item.class, EnderCrystal.class, ArmorStand.class).toArray(new Class[0]);
     private final FarmControl farmControl;
     private final CycleHistoryManager cycleHistoryManager;
     private final Map<World, Map<Trigger, Set<ActionProfile>>> worldTriggerProfilesMap = new HashMap<>();
