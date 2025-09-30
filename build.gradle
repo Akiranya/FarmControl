@@ -26,7 +26,7 @@ repositories {
         url "https://repo.papermc.io/repository/maven-public/"
     }
     maven {
-        url = 'https://repo.extendedclip.com/content/repositories/placeholderapi/'
+        url = "https://repo.helpch.at/releases" // PlaceholderAPI
     }
     maven {
         url = 'https://repo.codemc.org/repository/maven-public/'
@@ -35,18 +35,16 @@ repositories {
         url = 'https://jitpack.io'
     }
     maven {
-        url = uri("https://maven.pkg.github.com/akiranya/nab-configuration")
-        credentials {
-            username = project.findProperty("gpr.user") ?: System.getenv("USERNAME")
-            password = project.findProperty("gpr.key") ?: System.getenv("TOKEN")
-        }
+        name = "nyaadanbouReleases"
+        url = uri("https://repo.mewcraft.cc/releases")
+        credentials(PasswordCredentials.class)
     }
 }
 
 dependencies {
     testImplementation 'junit:junit:4.13.2'
-    compileOnly 'dev.folia:folia-api:1.20.1-R0.1-SNAPSHOT'
-    compileOnly 'me.clip:placeholderapi:2.10.9'
+    compileOnly 'dev.folia:folia-api:1.21.6-R0.1-SNAPSHOT'
+    compileOnly 'me.clip:placeholderapi:2.11.6'
     implementation 'org.jooq:joor-java-8:0.9.14'
     implementation 'com.froobworld:nab-configuration:1.0.2'
     implementation 'org.bstats:bstats-base:3.0.2'
